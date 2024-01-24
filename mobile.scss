@@ -66,8 +66,14 @@
         padding-top: 51px;
         padding-bottom: 85px;      
             
-        &__img{
+        &__img-1{
             background-image: url(img/game1m.png);
+            width: 343px;
+            height: 236px;
+        }
+
+        &__img-2{
+            background-image: url(img/game2m.png);
             width: 343px;
             height: 236px;
         }
@@ -82,6 +88,25 @@
             text-align: center;
             line-height: 22px;
         }        
+    }
+
+    .game-2{
+        flex-wrap: wrap;
+        gap: 64px;  
+        padding-top: 51px;
+        padding-bottom: 90px;        
+    }
+
+    .game-3{
+        padding-top: 51px;
+        padding-bottom: 487px;
+    
+        &__text{          
+            font-size: 14px;
+            text-align: center;
+            line-height: 22px;
+        }
+    
     }
 
 }
