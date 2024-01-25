@@ -16,20 +16,20 @@ for (let i = 7; i < 23; i++) {
 }
 
 // task 4
-var obj = {
+const obj = {
     'Коля': '200',
     'Вася': '300',
     'Петя': '400'
 };
-for (var key in obj) {
+for (let key in obj) {
     if (obj.hasOwnProperty(key)) {
       console.log(key + ' — зарплата ' + obj[key] + ' долларов.');
     }
 }
 
 // task 5
-var n = 1000;
-var num = 0;
+let n = 1000;
+let num = 0;
 while (n >= 50) {
     n /= 2;
     num++;
@@ -38,9 +38,9 @@ console.log('Получится число: ' + n);
 console.log('Количество итераций: ' + num);
 
 // task 6
-var firstFriday = 5; 
-for (var day = 1; day <= 31; day++) {
-    if ((day - 1) % 7 + 1 === firstFriday) {
+const firstFriday = 5; 
+for (let day = 1; day <= 31; day++) {
+    if (day % 7  === firstFriday) {
         console.log("Сегодня пятница, " + day + "-е число. Необходимо подготовить отчет.");
     }
 }

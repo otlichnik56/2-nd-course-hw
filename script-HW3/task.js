@@ -1,6 +1,6 @@
 // task 1
 let password = '123';
-let insert = prompt("Пароль введен верно");
+let insert = prompt("Введите пароль");
 if(insert === password){
     alert("Пароль введен верно");
 } else{
