@@ -21,7 +21,7 @@ console.log(getSeason(13)); // Проверка 8 задачи
 
 
 // task 1
-findMinNumber = (a, b) => (a < b ? a : b); 
+const findMinNumber = (a, b) => (a < b ? a : b); 
 
 
 // task 2
@@ -38,7 +38,7 @@ const square = (number) => number * number;
 
 // task 4
 function greetUser() {
-    const age = parseInt(prompt("Сколько вам лет?"));    
+    const age = Number(prompt("Сколько вам лет?"));    
     if (isNaN(age) || age < 0) { 
         console.log("Вы ввели неправильное значение");
     } else if (age >= 0 && age <= 12) { 
@@ -51,7 +51,8 @@ function greetUser() {
 
 // task 5
 function multiplyNumbers(num1, num2) {
-    if (typeof num1 !== 'number' || typeof num2 !== 'number' || isNaN(num1) || isNaN(num2)) {
+    if (typeof num1 !== 'number' || typeof num2 !== 'number' || isNaN(num1) || isNaN(num2) || 
+    num1 == null || num1 == undefined || num2 == null || num2 == undefined) {
         return 'Одно или оба значения не являются числом';
     } else {
         return num1 * num2;
@@ -62,8 +63,8 @@ function multiplyNumbers(num1, num2) {
 // task 6
 function cubeNumber() {
     const userInput = prompt("Введите число:");
-    const number = parseFloat(userInput);  
-    if (isNaN(number)) {
+    const number = Number(userInput);  
+    if (isNaN(number)  || userInput === "") {
         return 'Переданный параметр не является числом';
     } else {
         const result = number ** 3; 
@@ -74,28 +75,22 @@ function cubeNumber() {
 
 // task 7
 const circle1 = {
-    radius: 5, 
-    getArea: function() {
-        return Math.PI * this.radius ** 2; 
-    },
-    getPerimeter: function() {
-        return 2 * Math.PI * this.radius; 
-    }
+    radius: 5
 };
 const circle2 = {
-    radius: 8, 
-    getArea: function() {
-        return Math.PI * this.radius ** 2; 
-    },
-    getPerimeter: function() {
-        return 2 * Math.PI * this.radius; 
-    }
+    radius: 8
 };
+function getArea(radius) {
+    return Math.PI * radius ** 2; 
+}
+function getPerimeter(radius) {
+    return 2 * Math.PI * radius; 
+}
 
 
 // task 8
 function getSeason(monthNumber) {
-    if (monthNumber === 12 || monthNumber <= 2) {
+    if (monthNumber === 12 || monthNumber <= 2 && monthNumber > 0) {
         return "Зима";
     } else if (monthNumber >= 3 && monthNumber <= 5) {
         return "Весна";
