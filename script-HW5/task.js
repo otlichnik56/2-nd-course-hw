@@ -9,10 +9,6 @@ console.log(multiplyNumbers(5, 3)); // Проверка 5 задачи
 console.log(multiplyNumbers('abc', 3)); // Проверка 5 задачи
 console.log(multiplyNumbers(7, 'xyz')); // Проверка 5 задачи
 console.log(cubeNumber());  // Проверка 6 задачи
-console.log(`Площадь круга circle1: ${circle1.getArea()}`);  // Проверка 7 задачи
-console.log(`Периметр круга circle1: ${circle1.getPerimeter()}`);  // Проверка 7 задачи
-console.log(`Площадь круга circle2: ${circle2.getArea()}`);  // Проверка 7 задачи
-console.log(`Периметр круга circle2: ${circle2.getPerimeter()}`);  // Проверка 7 задачи
 console.log(getSeason(1));  // Проверка 8 задачи
 console.log(getSeason(4));  // Проверка 8 задачи
 console.log(getSeason(8));  // Проверка 8 задачи
@@ -75,17 +71,33 @@ function cubeNumber() {
 
 // task 7
 const circle1 = {
-    radius: 5
+    radius: 5,
+    getArea: function() {
+        return calculateArea(this.radius);
+    },
+    getPerimeter: function() {
+        return calculatePerimeter(this.radius);
+    }
 };
 const circle2 = {
-    radius: 8
+    radius: 8,
+    getArea: function() {
+        return calculateArea(this.radius);
+    },
+    getPerimeter: function() {
+        return calculatePerimeter(this.radius);
+    }
 };
-function getArea(radius) {
+function calculateArea(radius) {
     return Math.PI * radius ** 2; 
 }
-function getPerimeter(radius) {
+function calculatePerimeter(radius) {
     return 2 * Math.PI * radius; 
 }
+console.log("Площадь circle1:", circle1.getArea());  // Проверка задачи 7
+console.log("Периметр circle1:", circle1.getPerimeter());  // Проверка задачи 7
+console.log("Площадь circle2:", circle2.getArea());  // Проверка задачи 7
+console.log("Периметр circle2:", circle2.getPerimeter());  // Проверка задачи 7
 
 
 // task 8
