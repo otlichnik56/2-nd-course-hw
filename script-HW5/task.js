@@ -72,32 +72,24 @@ function cubeNumber() {
 // task 7
 const circle1 = {
     radius: 5,
-    getArea: function() {
-        return calculateArea(this.radius);
-    },
-    getPerimeter: function() {
-        return calculatePerimeter(this.radius);
-    }
+    getArea,
+    getPerimeter
 };
 const circle2 = {
     radius: 8,
-    getArea: function() {
-        return calculateArea(this.radius);
-    },
-    getPerimeter: function() {
-        return calculatePerimeter(this.radius);
-    }
+    getArea,
+    getPerimeter
 };
-function calculateArea(radius) {
+function getArea(radius) {
     return Math.PI * radius ** 2; 
-}
-function calculatePerimeter(radius) {
+};
+function getPerimeter(radius) {
     return 2 * Math.PI * radius; 
-}
-console.log("Площадь circle1:", circle1.getArea());  // Проверка задачи 7
-console.log("Периметр circle1:", circle1.getPerimeter());  // Проверка задачи 7
-console.log("Площадь circle2:", circle2.getArea());  // Проверка задачи 7
-console.log("Периметр circle2:", circle2.getPerimeter());  // Проверка задачи 7
+};
+console.log("Площадь circle1:", circle1.getArea);  // Проверка задачи 7
+console.log("Периметр circle1:", circle1.getPerimeter);  // Проверка задачи 7
+console.log("Площадь circle2:", circle2.getArea);  // Проверка задачи 7
+console.log("Периметр circle2:", circle2.getPerimeter);  // Проверка задачи 7
 
 
 // task 8
