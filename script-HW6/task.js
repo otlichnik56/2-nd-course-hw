@@ -2,10 +2,10 @@
 const array = [1, 5, 4, 10, 0, 3];
 for (let i = 0; i < array.length; i++) {
     const element = array[i];
+    console.log(element);
     if (element === 10) {
         break; 
-    }
-    console.log(element);
+    }    
 }
 
 //task 2
