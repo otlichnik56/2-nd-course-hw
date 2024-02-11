@@ -78,5 +78,5 @@ const formattedDateTime = formatDateTime(currentDate);
 console.log(formattedDateTime);
 
 //task11
-
+// смотри в директории script файл game2.js
 
